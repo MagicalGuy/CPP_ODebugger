@@ -1,0 +1,52 @@
+#pragma once
+#include "DbgObject.h"
+#include "BPTF.h"
+#include "DbgSymbol.h"
+#include <list>
+using std::list;
+
+typedef list<BPObject*>::iterator BpItr;  //断点列表迭代器
+
+class BreakpointEngine : public DbgObject, public DbgSymbol
+{
+
+	list<BPObject*>	m_bpList;	// 断点列表
+	BPObject* m_pRecoveryBp;//等待恢复的断点
+public:
+	BreakpointEngine();
+	~BreakpointEngine();
+
+
+protected:
+	// 根据异常信息来查找断点, 返回断点在链表中的迭代器
+	BpItr FindBreakpoint(const EXCEPTION_DEBUG_INFO& ExceptionInfo);
+	// 修复异常
+	bool FixException(BpItr FindItr);
+	// 恢复失效的断点
+	bool ReInstallBreakpoint();
+	// 检查断点是否重复
+	BPObject* CheckRepeat(uaddr uAddress, E_BPType eType);
+public:
+	// 根据地址和类型查找一个断点
+	BPObject* FindBreakpoint(uaddr uAddress, E_BPType eType = e_bt_none);
+	// 添加一个断点到断点链表(用于硬件断点和内存访问断点))
+	BPObject* AddBreakPoint(uaddr uAddress, E_BPType eType, uint uLen = 0);
+	// 添加一个断点到断点列表(用于软件断点)
+	BPObject* AddBreakPoint(const char* pszApiName);
+	// 移除一个断点
+	bool DeleteBreakpoint(uint uIndex);
+
+	// 判断一个断点迭代器是否是无效的
+	bool IsInvalidIterator(const BpItr& itr)const;
+	// 获取断点列表的开始迭代器
+	list<BPObject*>::const_iterator GetBPListBegin()const;
+	// 获取断点列表的结束迭代器
+	list<BPObject*>::const_iterator GetBPListEnd()const;
+
+	// 为断点设置条件表达式
+	static void SetExp(BPObject* pBp, const CStringA& strExp);
+	// 将断点设置成一次性断点
+	static void SetOnce(BPObject* pBp, bool bOnce);
+	// 清空断点链表
+	void Clear();
+};

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="BreakpointEngine">
+      <UniqueIdentifier>{17107d42-8ba0-4e4c-a64e-c5247902407a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PeTool">
+      <UniqueIdentifier>{4f7223f2-40fc-4059-b7ec-dc4e55085e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExpreAnaly">
+      <UniqueIdentifier>{eb869dc0-33ea-4fa2-bae8-bdd3f559415f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Disassembly">
+      <UniqueIdentifier>{4e14e237-992f-4c9e-989a-66d533558c4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AssemblyEngine">
+      <UniqueIdentifier>{d49e1205-5999-4efc-b104-6d1b80d00924}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DebugEngine">
+      <UniqueIdentifier>{7986007d-af35-412a-9b26-7296bb3dae76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DebugObject">
+      <UniqueIdentifier>{ef86a96a-324a-4cc8-9d0a-78932b4a4bb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DebugUi">
+      <UniqueIdentifier>{9898e44b-9c06-47d9-8105-b680ab7c7fb5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DbgObject.h">
+      <Filter>DebugObject</Filter>
+    </ClInclude>
+    <ClInclude Include="RegStruct.h">
+      <Filter>DebugObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Pectrl.h">
+      <Filter>PeTool</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Expression.h">
+      <Filter>ExpreAnaly</Filter>
+    </ClInclude>
+    <ClInclude Include="BreakpointEngine.h">
+      <Filter>BreakpointEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="BPObject.h">
+      <Filter>BreakpointEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="BPTF.h">
+      <Filter>BreakpointEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="BPSoft.h">
+      <Filter>BreakpointEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="BPHard.h">
+      <Filter>BreakpointEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="BPAcc.h">
+      <Filter>BreakpointEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DbgSymbol.h">
+      <Filter>BreakpointEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DbgEngine.h">
+      <Filter>DebugEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DbgUi.h">
+      <Filter>DebugUi</Filter>
+    </ClInclude>
+    <ClInclude Include="hightLight.h">
+      <Filter>DebugUi</Filter>
+    </ClInclude>
+    <ClInclude Include="DisAsmEngine.h">
+      <Filter>Disassembly</Filter>
+    </ClInclude>
+    <ClInclude Include="XEDParse.h">
+      <Filter>AssemblyEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="TangDebugger.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundCode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OutHex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AddPlugin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HidePEB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TangDebugger.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DbgObject.cpp">
+      <Filter>DebugObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Pectrl.cpp">
+      <Filter>PeTool</Filter>
+    </ClCompile>
+    <ClCompile Include="Expression.cpp">
+      <Filter>ExpreAnaly</Filter>
+    </ClCompile>
+    <ClCompile Include="BreakpointEngine.cpp">
+      <Filter>BreakpointEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="BPObjcet.cpp">
+      <Filter>BreakpointEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="BPTF.cpp">
+      <Filter>BreakpointEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="BPSoft.cpp">
+      <Filter>BreakpointEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="BPHard.cpp">
+      <Filter>BreakpointEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="BPAcc.cpp">
+      <Filter>BreakpointEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="DBGSymbol.cpp">
+      <Filter>BreakpointEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="DbgEngine.cpp">
+      <Filter>DebugEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="DbgUi.cpp">
+      <Filter>DebugUi</Filter>
+    </ClCompile>
+    <ClCompile Include="DisAsmEngine.cpp">
+      <Filter>Disassembly</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundCode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OutHex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TangDebugger.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
